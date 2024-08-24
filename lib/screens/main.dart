@@ -16,7 +16,7 @@ class MainScreen extends StatelessWidget {
   ];
 
   // Method to generate ExpandedChild widgets
-  List<Widget> _buildKeys() {
+  List<Widget> _buildExpandedChilds() {
     return List.generate(keyColors.length, (index) {
       return ExpandedChild(id: index + 1, color: keyColors[index]);
     });
@@ -36,7 +36,7 @@ class MainScreen extends StatelessWidget {
       body: SafeArea(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: _buildKeys(),
+          children: _buildExpandedChilds(),
         ),
       ),
     );
